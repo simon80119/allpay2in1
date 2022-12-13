@@ -39,7 +39,7 @@ class AllpayServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/Views', 'allpay');
 
         //Facade => Custom Class
-        $this->app['allpay'] = $this->app->share(function ($app) {
+        $this->app->singleton('allpay', function ($app) {
             return new Allpay;
         });
 

@@ -694,7 +694,7 @@
 				unset($Feedback['ErrorMessage']);
 				$CheckMacValue = ECPay_CheckMacValue::generate($Feedback, $this->HashKey, $this->HashIV);
 				if ($CheckMacValue != $FeedbackCheckMacValue) {
-					throw new Exception('CheckMacValue verify fail.');
+					throw new Exception('CheckMacValue verify fail.'.'FeedbackCheckMacValue : '.$FeedbackCheckMacValue.' ; CalCheckMacValue : '.$CheckMacValue.' ; HashKey : '.$this->HashKey.' ; HashIV : '.$this->HashIV);
 				}
 			}
 		}
@@ -1650,7 +1650,7 @@
 				$this->IsOverLength($Name, $this->StringLength($Value, $this->Encode), $MaxLength);
 				
 				// 格式檢查
-				$this->IsValidFormat($Name, '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,4}$/', $Value);
+				//$this->IsValidFormat($Name, '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,4}$/', $Value);
 			}
 		}
 		
