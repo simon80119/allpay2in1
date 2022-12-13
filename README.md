@@ -2,7 +2,7 @@
 
 整合綠界線上刷卡及超商物流
 
-本repository 部份fork自ScottChayaa的https://github.com/ScottChayaa/Allpay ，謹此聲明。
+本repository 部份fork自ScottChayaa的https://github.com/kennychou3896/allpay2in1 ，謹此聲明。
 
 適用對象:以Laravel 5開發商務網站，欲使用綠界線上金流、物流服務。
 
